@@ -55,19 +55,12 @@ public final class Inheritance implements Exercise {
     public void run() {
         List<Citizen> citizens = new ArrayList<>();
 
-        // TODO(Студент): Добавить все элементы, доступные в объекте source, в коллекцию citizens
-
-        // TODO(Студент): Отсортировать список citizens перед выводом в поток
-
-        // TODO(Студент): Пользуясь объектом writer вывести список citizens в консоль
-        
-        for (Citizen citizen : source) {  // TODO(Студент): Добавить все элементы, доступные в объекте source, в коллекцию citizens
+        for (Citizen citizen : source) {  
             citizens.add(citizen);
         }
 
-        Collections.sort(citizens, comparator);  // TODO(Студент): Отсортировать список citizens перед выводом в поток
-
-        citizens.forEach((citizen) -> {          // TODO(Студент): Пользуясь объектом writer вывести список citizens в консоль
+        Collections.sort(citizens, comparator);  
+        citizens.forEach((citizen) -> {          
             try {
                 writer.write(citizen);
             } catch (IOException ex) {
